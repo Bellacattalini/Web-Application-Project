@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 (function($) {
 
 	var	$window = $(window),
@@ -183,3 +184,7 @@
 			});
 
 })(jQuery);
+
+// Confirm Connection
+console.log("main.js is connected");
+alert("Welcome! Your custom JS is running.");

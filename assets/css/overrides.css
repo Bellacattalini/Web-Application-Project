@@ -1,0 +1,271 @@
+/* =====  palette overrides ===== */
+
+/* page background + base text */
+body {
+  background-color: #fff9f5;      /* page background */
+  color: #442626;                 /* default text */
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #3c0909;                 /* heading color */
+}
+
+/* links */
+a {
+  color: #7b2e2e;
+}
+a:hover, a:focus {
+  color: #a24343;
+}
+
+/* buttons (Phantom uses .button) */
+.button, input[type="submit"].primary {
+  background: #3c0909;
+  color: #fff !important;
+  border-color: #3c0909;
+}
+.button:hover, input[type="submit"].primary:hover {
+  background: #5a1212;
+  border-color: #5a1212;
+}
+
+/* section backgrounds that use .inner panels */
+.inner .box, .inner .content {
+  background: transparent; /* keep clean/minimal */
+}
+
+/* footer strip */
+#footer {
+  background: #e9dbd2;
+}
+#footer .inner {
+  background: transparent;
+  color: #3b2a2a;
+}
+#footer a { color: #562e1a; }
+#footer a:hover { color: #472312; } 
+
+/* footer social icons */
+#footer .icons .icon {
+  border: 1px solid #3c0909;      /* dark brown border to match headings/buttons */
+  color: #3c0909;                 /* icon colour */
+  transition: all 0.3s ease;
+}
+
+#footer .icons .icon:hover {
+  background-color: #5a1212;      /* hover background */
+  color: #fff;                    /* icon turns white on hover */
+  border-color: #5a1212;          /* consistent with button hover */
+}
+
+
+/* Menu background + text */
+#menu {
+  background-color: #e9dbd2 !important;   /* same as footer background */
+  color: #3b2a2a !important;              /* same as footer text */
+}
+
+/* Optional: make menu links match your palette */
+#menu a {
+  color: #562e1a !important;              /* matches footer links */
+  border-bottom: 1px solid rgba(60, 9, 9, 0.1); /* subtle divider between links */
+  padding: 0.75em 0;
+  display: block;
+}
+
+#menu a:hover {
+  color: #472312 !important;              /* hover colour same as footer hover */
+}
+
+/* --- Uniform square tiles with auto-cropping images --- */
+.tiles article .image {
+  /* make every tile square and clip overflow */
+  aspect-ratio: 1 / 1;      /* modern, responsive square */
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;        /* keep Phantom’s rounded look */
+}
+
+/* force the image to fill the square without distortion */
+.tiles article .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* crop, don't squish */
+  object-position: center;   /* center the crop */
+}
+
+
+/* ---------- LIGHT MODE (DEFAULT) ---------- */
+body { background:#fff9f5; color:#3b2a2a; }
+
+h1,h2,h3,h4,h5,h6 { color:#3c0909; }
+
+a { color:#7b2e2e; }
+a:hover, a:focus { color:#a24343; }
+
+/* Buttons (Phantom: .button and .primary submit) */
+.button, input[type="submit"].primary {
+  background:#3c0909; color:#fff !important; border-color:#3c0909;
+}
+.button:hover, input[type="submit"].primary:hover {
+  background:#5a1212; border-color:#5a1212;
+}
+
+/* Lines / rules / input underlines */
+hr { border: 0; border-top:1px solid rgba(60,9,9,0.25); }
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], textarea {
+  color:#3c0909;
+  border-bottom:1px solid #3c0909;
+  background:transparent;
+}
+input::placeholder, textarea::placeholder { color:#7a5b5b; opacity:1; }
+input:focus, textarea:focus { border-bottom-color:#5a1212; box-shadow:none; }
+
+/* Footer strip + content */
+#footer { background:#e9dbd2; }
+#footer .inner { background:transparent; color:#3b2a2a; }
+#footer a { color:#7b2e2e; }
+#footer a:hover { color:#a24343; }
+
+/* Footer social icons (border + hover consistent) */
+#footer .icons .icon {
+  border:1px solid #3c0909; color:#3c0909;
+}
+#footer .icons .icon:hover {
+  background: #5a1212; color:#fff; border-color:#5a1212;
+}
+
+/* Slide-out menu panel (same colour as footer) */
+#menu { background:#e9dbd2; color:#3b2a2a; }
+#menu h2 { color:#3c0909; }
+#menu a { color:#562e1a; border-bottom:1px solid rgba(60,9,9,0.1); display:block; padding:.75em 0; }
+#menu a:hover { color:#472312; }
+
+/* Little “Menu” trigger (top-right) */
+#header nav a[href="#menu"] {
+  color:#3c0909; border:2px solid #3c0909; border-radius:6px; padding:6px 10px;
+}
+#header nav a[href="#menu"]:hover {
+  color:#5a1212; border-color:#5a1212; background:rgba(60,9,9,0.08);
+}
+
+
+/* ---------- DARK MODE (WHEN TOGGLED) ---------- */
+html[data-theme="dark"] body       { background:#241d1b; color:#e9ded6; }
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6         { color:#f2e6df; }
+
+html[data-theme="dark"] a          { color:#e3b7a3; }
+html[data-theme="dark"] a:hover,
+html[data-theme="dark"] a:focus    { color:#f0c7b5; }
+
+/* Buttons */
+html[data-theme="dark"] .button,
+html[data-theme="dark"] input[type="submit"].primary {
+  background:#f2e6df; color:#1f1917 !important; border-color:#f2e6df;
+}
+html[data-theme="dark"] .button:hover,
+html[data-theme="dark"] input[type="submit"].primary:hover {
+  background:#bdb2ab; border-color:#f2e6df;
+}
+
+/* Lines / inputs */
+html[data-theme="dark"] hr { border-top:1px solid rgba(233,222,214,0.22); }
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] input[type="email"],
+html[data-theme="dark"] input[type="number"],
+html[data-theme="dark"] input[type="password"],
+html[data-theme="dark"] textarea {
+  color:#e9ded6;
+  border-bottom:1px solid #e9ded6;
+  background:transparent;
+}
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color:#cdbeb5; opacity:1;
+}
+html[data-theme="dark"] input:focus,
+html[data-theme="dark"] textarea:focus {
+  border-bottom-color:#f0c7b5; box-shadow:none;
+}
+
+/* Footer (dark counterpart) */
+html[data-theme="dark"] #footer { background:#1f1917; color:#e9ded6; }
+html[data-theme="dark"] #footer a { color:#e3b7a3; }
+html[data-theme="dark"] #footer a:hover { color:#f0c7b5; }
+
+/* Footer icons in dark */
+html[data-theme="dark"] #footer .icons .icon {
+  border:1px solid #6c4a43; color:#e9ded6;
+}
+html[data-theme="dark"] #footer .icons .icon:hover {
+  border-color:#8b5a52; color:#fff; background:transparent;
+}
+
+/* Slide-out menu (dark) */
+html[data-theme="dark"] #menu { background:#241d1b; color:#e9ded6; }
+html[data-theme="dark"] #menu h2 { color:#f2e6df; }
+html[data-theme="dark"] #menu a { color:#e3b7a3; border-bottom:1px solid rgba(233,222,214,0.12); }
+html[data-theme="dark"] #menu a:hover { color:#f0c7b5; }
+
+/* Menu trigger (dark) */
+html[data-theme="dark"] #header nav a[href="#menu"] {
+  color:#e9ded6; border-color:#e9ded6; background:transparent;
+}
+html[data-theme="dark"] #header nav a[href="#menu"]:hover {
+  color:#f0c7b5; border-color:#f0c7b5; background:rgba(233,222,214,0.08);
+}
+
+/* Topbar container */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0 20px 0; /* adjust spacing as needed */
+}
+
+/* Toggle button */
+.theme-toggle {
+  background: none;
+  border: 2px solid #9c897a; /* same outline as your footer icons */
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Toggle image */
+.theme-toggle img {
+  width: 35px;      /* increase size (default was 25px) */
+  height: 35px;     /* match proportions */
+  object-fit: contain;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hover animation for the button */
+.theme-toggle:hover {
+  border-color: #5a1212; /* darker brown hover border */
+  background: rgba(90, 18, 18, 0.05);
+}
+
+.theme-toggle:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Keep consistent sizing with contact icons */
+.icons .icon,
+.theme-toggle {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
